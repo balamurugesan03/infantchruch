@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Cross, Menu, X, HandHeart, ChevronRight } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Introduction', path: '/introduction' },
+  { label: 'Introduction', path: '/church-theology' },
   { label: 'Home',         path: '/home' },
   { label: 'About',        path: '/about' },
   { label: 'Gallery',      path: '/gallery' },

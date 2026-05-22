@@ -7,6 +7,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Introduction from './pages/Introduction';
 import ChurchIntro from './pages/ChurchIntro';
+import ChurchTheology from './pages/ChurchTheology';
 import AdminLogin from './admin/AdminLogin';
 import AdminLayout from './admin/AdminLayout';
 import AdminDashboard from './admin/AdminDashboard';
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
+            <Route path="church-theology" element={<ChurchTheology />} />
             <Route path="introduction" element={<Introduction />} />
             <Route path="church-intro" element={<ChurchIntro />} />
             <Route path="about" element={<About />} />
