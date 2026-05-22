@@ -98,21 +98,36 @@ export default function Introduction() {
               ദൈവാലയം കണ്ടെത്തുക
             </p>
             <div className="intro-search-row">
-              <input
+              {/* <input
                 value={searchVal}
                 onChange={e => setSearchVal(e.target.value)}
                 placeholder="പള്ളി കണ്ടെത്തി..."
                 className="intro-search-input"
                 onFocus={e => e.target.style.borderColor = '#c9a84c'}
                 onBlur={e => e.target.style.borderColor = '#e8e0d0'}
-              />
+              /> */}
               <motion.button
-                whileTap={{ scale: 0.97 }}
+                animate={{ scale: [1, 1.05, 1], boxShadow: ['0 4px 16px rgba(122,12,12,0.3)', '0 8px 32px rgba(122,12,12,0.6)', '0 4px 16px rgba(122,12,12,0.3)'] }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.1, boxShadow: '0 12px 36px rgba(122,12,12,0.7)' }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => navigate('/church-intro')}
                 className="intro-search-btn"
+                style={{
+                  background: 'linear-gradient(135deg, #7a0c0c 0%, #9b1212 100%)',
+                  border: 'none',
+                  width: 200,
+                  height: 64,
+                  flexShrink: 0,
+                  cursor: 'pointer',
+                  borderRadius: 50,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 8,
+                }}
               >
-                <IconSearch size={17} color="#1a56db" strokeWidth={2.5} />
-                <span>പള്ളി കണ്ടി</span>
+                <img src="/palli kannadi.png" alt="പള്ളി കണ്ടി" style={{ height: 36, objectFit: 'contain' }} />
               </motion.button>
             </div>
           </motion.div>

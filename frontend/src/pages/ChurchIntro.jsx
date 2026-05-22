@@ -5,13 +5,13 @@ import { IconSearch, IconChevronRight, IconX } from '@tabler/icons-react';
 import { pageService } from '../services/api';
 
 const MENU_ITEMS = [
-  { label: 'ദൈവാലയ പ്രഖ്യാപനങ്ങൾ',              download: '/pdfs/Button 1 daivalaya gopurangal 3 pages (1).pdf' },
-  { label: 'രക്ഷാകരി ചരിത്രം',                    path: '/about' },
-  { label: 'മിസ്സ ബലിപ്പട്ടിക',                   path: '/contact' },
-  { label: 'ഉണ്ണിമിശിഹായുടെ ദൈവാലയം',            path: '/about' },
-  { label: 'അർച്ചനാമൊഴികൾ',                       path: '/contact' },
-  { label: 'വിശുദ്ധർ',                             path: '/gallery' },
-  { label: 'തിരുക്ക ഇനങ്ങൾ',                      path: '/gallery' },
+  { label: 'ദൈവാലയ ഗോപുരങ്ങൾ',                        download: '/pdfs/Button 1 daivalaya gopurangal 3 pages (1).pdf' },
+  { label: 'രക്ഷാകര ചരിത്രം',                          path: '/about' },
+  { label: 'അങ്കണത്തിൽ നിന്ന് ആനവാതിലിലേക്ക്',       path: '/contact' },
+  { label: 'ദൈവാലയത്തിന്റെ ഉൽത്തളങ്ങളിൽ',            path: '/about' },
+  { label: 'ആൾത്താരയിലേക്ക്',                         path: '/contact' },
+  { label: 'വിശുദ്ധർ',                                 path: '/gallery' },
+  { label: 'തിരികെ ഇറങ്ങുമ്പോൾ',                     path: '/gallery' },
 ];
 
 export default function ChurchIntro() {
@@ -143,7 +143,7 @@ export default function ChurchIntro() {
                 marginBottom: 32,
               }}
             >
-              <div style={{
+              {/* <div style={{
                 flex: 1,
                 display: 'flex',
                 alignItems: 'center',
@@ -170,8 +170,8 @@ export default function ChurchIntro() {
                     fontFamily: "'Meera Inimai', sans-serif",
                   }}
                 />
-              </div>
-              <motion.button
+              </div> */}
+              {/* <motion.button
                 whileHover={{ scale: 1.06, boxShadow: '0 8px 28px rgba(244,163,0,0.5)' }}
                 whileTap={{ scale: 0.97 }}
                 style={{
@@ -194,7 +194,7 @@ export default function ChurchIntro() {
                 }}>
                   തിരയുക
                 </span>
-              </motion.button>
+              </motion.button> */}
             </motion.div>
 
             {/* ── Malayalam content card ── */}
@@ -311,7 +311,7 @@ export default function ChurchIntro() {
               textTransform: 'uppercase', marginBottom: 4,
               paddingLeft: 4,
             }}>
-              വിഭാഗങ്ങൾ
+             ദൈവാലയ ഗോപുരങ്ങൾ
             </div>
 
             {MENU_ITEMS.map((item, i) => (
