@@ -21,12 +21,16 @@ import {
   IconLogout,
   IconMenu2,
   IconLayoutDashboard,
+  IconBuildingChurch,
+  IconBook,
 } from '@tabler/icons-react';
 import { useAuth } from '../context/AuthContext';
 
 const navItems = [
   { path: '/admin', label: 'Dashboard', icon: IconLayoutDashboard, exact: true },
   { path: '/admin/home', label: 'Home Page', icon: IconHome },
+  { path: '/admin/introduction', label: 'Introduction Page', icon: IconBook },
+  { path: '/admin/church-intro', label: 'Church Intro Page', icon: IconBuildingChurch },
   { path: '/admin/about', label: 'About Page', icon: IconInfoCircle },
   { path: '/admin/gallery', label: 'Gallery', icon: IconPhoto },
   { path: '/admin/events', label: 'Events', icon: IconCalendar },

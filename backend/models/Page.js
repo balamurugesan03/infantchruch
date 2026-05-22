@@ -12,7 +12,7 @@ const pageSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-      enum: ['home', 'about'],
+      enum: ['home', 'about', 'introduction', 'church-intro'],
     },
     heroTitle: { type: String, default: '' },
     heroSubtitle: { type: String, default: '' },
@@ -25,6 +25,7 @@ const pageSchema = new mongoose.Schema(
         language: String,
       },
     ],
+    metadata: { type: mongoose.Schema.Types.Mixed, default: {} },
     isPublished: { type: Boolean, default: true },
   },
   { timestamps: true }

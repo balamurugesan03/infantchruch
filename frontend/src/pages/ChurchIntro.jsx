@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { IconSearch, IconChevronRight } from '@tabler/icons-react';
+import { IconSearch, IconChevronRight, IconX } from '@tabler/icons-react';
+import { pageService } from '../services/api';
 
 const MENU_ITEMS = [
-  { label: 'ദൈവാലയ പ്രഖ്യാപനങ്ങൾ',              download: '/pdfs/daivalaya-gopurangal.pdf' },
+  { label: 'ദൈവാലയ പ്രഖ്യാപനങ്ങൾ',              download: '/pdfs/Button 1 daivalaya gopurangal 3 pages (1).pdf' },
   { label: 'രക്ഷാകരി ചരിത്രം',                    path: '/about' },
   { label: 'മിസ്സ ബലിപ്പട്ടിക',                   path: '/contact' },
   { label: 'ഉണ്ണിമിശിഹായുടെ ദൈവാലയം',            path: '/about' },
@@ -13,25 +14,20 @@ const MENU_ITEMS = [
   { label: 'തിരുക്ക ഇനങ്ങൾ',                      path: '/gallery' },
 ];
 
-const MALAYALAM_TEXT = `ആഗോള കത്തോലിക്കാ സഭയിൽ നെയ്യാറ്റിൻകര രൂപത
-പുത്തൻകട പ്രദേശത്തിൽ ഉണ്ണിമിശിഹായുടെ നാമധേയത്തിൽ
-നിലകൊള്ളുന്ന ദൈവാലയം തിരുസഭയുടെയും പ്രത്യേകിച്ച്
-ഇടവക ജനത്തിന്റെയും ദൈവാശ്രയത്തിന്റെയും
-വിശ്വസ്തതയുടെയും ഐക്യത്തിന്റെയും നേർസാക്ഷ്യമാണ്.
-ഈ ദൈവാലയം കേവലം ഒരു കല്ലും ചുണ്ണാമ്പും കൊണ്ട്
-നിർമ്മിച്ച കെട്ടിടം മാത്രമല്ല, മറിച്ച് തലമുറതലമുറയായി
-കൈമാറി വന്ന ഭക്തിയുടെയും ത്യാഗത്തിന്റെയും
-ഒരു ജീവനുള്ള ആലയമാണ്.
-
-ഇവിടെ ദൈവകൃപ അനുഭവിച്ച് ജീവിതം നയിക്കുന്ന
-അനേകം ക്രൈസ്തവ കുടുംബങ്ങൾ ഈ ദൈവാലയത്തിന്
-ചുറ്റും ഒത്തുചേർന്ന് ദൈവ ജനത്തിന്റെ ഐക്യം
-പ്രഘോഷിക്കുന്നു. ദൈവസ്നേഹത്തിന്റെ ഈ ഭവനത്തിലേക്ക്
-നിങ്ങളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.`;
-
 export default function ChurchIntro() {
   const [search, setSearch] = useState('');
+  const [pageData, setPageData] = useState(null);
+  const [pdfUrl, setPdfUrl] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    pageService.getPage('church-intro')
+      .then((res) => setPageData(res.data.data))
+      .catch(() => {});
+  }, []);
+
+  const m = (key, fallback) => pageData?.metadata?.[key] || fallback;
+  const bgImage = pageData?.heroImage || '/image.jpg';
 
   return (
     <div style={{
@@ -45,7 +41,7 @@ export default function ChurchIntro() {
       <div style={{
         position: 'fixed',
         inset: 0,
-        backgroundImage: 'url(/image.jpg)',
+        backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         filter: 'blur(3px) brightness(0.55)',
@@ -121,7 +117,7 @@ export default function ChurchIntro() {
                   margin: 0,
                   lineHeight: 1.25,
                 }}>
-                  ശിശുയേശു ദൈവാലയം, പുത്തൻകാട്
+                  {m('churchTitle', 'ശിശുയേശു ദൈവാലയം, പുത്തൻകാട്')}
                 </h1>
                 <p style={{
                   fontSize: '0.78rem',
@@ -130,7 +126,7 @@ export default function ChurchIntro() {
                   fontWeight: 600,
                   letterSpacing: '0.06em',
                 }}>
-                  നെയ്യാറ്റിൻകര രൂപത · Neyyattinkara Diocese
+                  {m('dioceseSubtitle', 'നെയ്യാറ്റിൻകര രൂപത · Neyyattinkara Diocese')}
                 </p>
               </div>
             </motion.div>
@@ -158,7 +154,6 @@ export default function ChurchIntro() {
                 overflow: 'hidden',
                 transition: 'border-color 0.2s, box-shadow 0.2s',
               }}
-              onFocus={() => {}}
               >
                 <input
                   value={search}
@@ -229,12 +224,12 @@ export default function ChurchIntro() {
                     fontSize: '0.68rem', color: '#f4a300', fontWeight: 700,
                     letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 2,
                   }}>
-                    ആമുഖം
+                    {m('introLabel', 'ആമുഖം')}
                   </div>
                   <div style={{
                     fontSize: '1.05rem', fontWeight: 700, color: '#1a2744',
                   }}>
-                    ദൈവാലയ പരിചയം
+                    {m('introSectionTitle', 'ദൈവാലയ പരിചയം')}
                   </div>
                 </div>
               </div>
@@ -248,7 +243,21 @@ export default function ChurchIntro() {
                 whiteSpace: 'pre-line',
                 fontFamily: 'sans-serif',
               }}>
-                {MALAYALAM_TEXT}
+                {m('mainContent', `ആഗോള കത്തോലിക്കാ സഭയിൽ നെയ്യാറ്റിൻകര രൂപത
+പുത്തൻകട പ്രദേശത്തിൽ ഉണ്ണിമിശിഹായുടെ നാമധേയത്തിൽ
+നിലകൊള്ളുന്ന ദൈവാലയം തിരുസഭയുടെയും പ്രത്യേകിച്ച്
+ഇടവക ജനത്തിന്റെയും ദൈവാശ്രയത്തിന്റെയും
+വിശ്വസ്തതയുടെയും ഐക്യത്തിന്റെയും നേർസാക്ഷ്യമാണ്.
+ഈ ദൈവാലയം കേവലം ഒരു കല്ലും ചുണ്ണാമ്പും കൊണ്ട്
+നിർമ്മിച്ച കെട്ടിടം മാത്രമല്ല, മറിച്ച് തലമുറതലമുറയായി
+കൈമാറി വന്ന ഭക്തിയുടെയും ത്യാഗത്തിന്റെയും
+ഒരു ജീവനുള്ള ആലയമാണ്.
+
+ഇവിടെ ദൈവകൃപ അനുഭവിച്ച് ജീവിതം നയിക്കുന്ന
+അനേകം ക്രൈസ്തവ കുടുംബങ്ങൾ ഈ ദൈവാലയത്തിന്
+ചുറ്റും ഒത്തുചേർന്ന് ദൈവ ജനത്തിന്റെ ഐക്യം
+പ്രഘോഷിക്കുന്നു. ദൈവസ്നേഹത്തിന്റെ ഈ ഭവനത്തിലേക്ക്
+നിങ്ങളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.`)}
               </div>
 
               {/* Gold divider */}
@@ -274,7 +283,7 @@ export default function ChurchIntro() {
                   fontSize: '0.75rem', color: '#999',
                   fontStyle: 'italic',
                 }}>
-                  നെയ്യാറ്റിൻകര രൂപതയ്ക്ക് കീഴിലുള്ള ഇടവക
+                  {m('dioceseFooter', 'നെയ്യാറ്റിൻകര രൂപതയ്ക്ക് കീഴിലുള്ള ഇടവക')}
                 </span>
               </div>
             </motion.div>
@@ -317,18 +326,9 @@ export default function ChurchIntro() {
                   boxShadow: '0 8px 28px rgba(122,12,12,0.35)',
                 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={async () => {
+                onClick={() => {
                   if (item.download) {
-                    const res = await fetch(item.download);
-                    const blob = await res.blob();
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'Daivalaya-Gopurangal.pdf';
-                    document.body.appendChild(a);
-                    a.click();
-                    a.remove();
-                    window.URL.revokeObjectURL(url);
+                    setPdfUrl(item.download);
                   } else {
                     navigate(item.path);
                   }
@@ -391,20 +391,75 @@ export default function ChurchIntro() {
                 fontFamily: 'sans-serif',
                 marginBottom: 4,
               }}>
-                ദൈവ സന്നിധിയിൽ
+                {m('decorativeCardTitle', 'ദൈവ സന്നിധിയിൽ')}
               </div>
               <div style={{
                 fontSize: '0.72rem',
                 color: '#888',
                 fontFamily: 'sans-serif',
                 lineHeight: 1.6,
+                whiteSpace: 'pre-line',
               }}>
-                ഓരോ ദിവസവും<br />ദൈവകൃപ അനുഭവിക്കുക
+                {m('decorativeCardText', 'ഓരോ ദിവസവും\nദൈവകൃപ അനുഭവിക്കുക')}
               </div>
             </motion.div>
           </motion.div>
         </div>
       </div>
+
+      {/* ── PDF Viewer Modal ── */}
+      {pdfUrl && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 999,
+          background: 'rgba(0,0,0,0.75)',
+          display: 'flex', flexDirection: 'column',
+          alignItems: 'center', justifyContent: 'center',
+          padding: '20px',
+        }}
+          onClick={() => setPdfUrl(null)}
+        >
+          <div
+            style={{
+              width: '100%', maxWidth: 860,
+              height: '90vh',
+              background: '#fff',
+              borderRadius: 16,
+              overflow: 'hidden',
+              display: 'flex', flexDirection: 'column',
+              boxShadow: '0 24px 80px rgba(0,0,0,0.5)',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal header */}
+            <div style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              padding: '14px 20px',
+              background: 'linear-gradient(135deg, #0f1c38, #1a2744)',
+              borderBottom: '1px solid rgba(201,168,76,0.2)',
+            }}>
+              <span style={{ color: '#c9a84c', fontWeight: 700, fontSize: '0.95rem', fontFamily: 'sans-serif' }}>
+                ദൈവാലയ പ്രഖ്യാപനങ്ങൾ
+              </span>
+              <button
+                onClick={() => setPdfUrl(null)}
+                style={{
+                  background: 'rgba(255,255,255,0.1)', border: 'none',
+                  borderRadius: 8, padding: '6px 8px',
+                  cursor: 'pointer', display: 'flex', alignItems: 'center',
+                }}
+              >
+                <IconX size={18} color="#fff" />
+              </button>
+            </div>
+            {/* PDF iframe */}
+            <iframe
+              src={pdfUrl}
+              style={{ flex: 1, width: '100%', border: 'none' }}
+              title="PDF Viewer"
+            />
+          </div>
+        </div>
+      )}
 
       <style>{`
         @media (max-width: 860px) {

@@ -12,6 +12,8 @@ import AdminLayout from './admin/AdminLayout';
 import AdminDashboard from './admin/AdminDashboard';
 import AdminHome from './admin/AdminHome';
 import AdminAbout from './admin/AdminAbout';
+import AdminIntroduction from './admin/AdminIntroduction';
+import AdminChurchIntro from './admin/AdminChurchIntro';
 import AdminGallery from './admin/AdminGallery';
 import AdminMessages from './admin/AdminMessages';
 import AdminEvents from './admin/AdminEvents';
@@ -24,7 +26,7 @@ export default function App() {
         <Routes>
           {/* Public website */}
           <Route path="/" element={<Layout />}>
-            <Route index element={<Introduction />} />
+            <Route index element={<Home />} />
             <Route path="home" element={<Home />} />
             <Route path="introduction" element={<Introduction />} />
             <Route path="church-intro" element={<ChurchIntro />} />
@@ -47,6 +49,8 @@ export default function App() {
           >
             <Route index element={<AdminDashboard />} />
             <Route path="home" element={<AdminHome />} />
+            <Route path="introduction" element={<AdminIntroduction />} />
+            <Route path="church-intro" element={<AdminChurchIntro />} />
             <Route path="about" element={<AdminAbout />} />
             <Route path="gallery" element={<AdminGallery />} />
             <Route path="messages" element={<AdminMessages />} />

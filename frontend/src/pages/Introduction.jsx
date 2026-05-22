@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -9,6 +9,7 @@ import {
   IconMap,
   IconGlobe,
 } from '@tabler/icons-react';
+import { pageService } from '../services/api';
 
 const STEPS = [
   { icon: IconBuildingChurch, label: 'വത്തിക്കാൻ', sublabel: 'Vatican' },
@@ -20,7 +21,17 @@ const STEPS = [
 
 export default function Introduction() {
   const [searchVal, setSearchVal] = useState('');
+  const [pageData, setPageData] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    pageService.getPage('introduction')
+      .then((res) => setPageData(res.data.data))
+      .catch(() => {});
+  }, []);
+
+  const m = (key, fallback) => pageData?.metadata?.[key] || fallback;
+  const churchImage = pageData?.heroImage || '/image.jpg';
 
   return (
     <div className="intro-page">
@@ -53,7 +64,7 @@ export default function Introduction() {
               </span>
             </div>
             <p style={{ fontFamily: 'sans-serif', fontSize: 'clamp(0.95rem, 2.5vw, 1.2rem)', fontWeight: 700, color: '#2c1800', margin: 0, lineHeight: 1.55 }}>
-              പുത്തൻകാട് ശിശുയേശു ദൈവാലയത്തിലേക്ക് സ്വാഗതം
+              {m('welcomeText', 'പുത്തൻകാട് ശിശുയേശു ദൈവാലയത്തിലേക്ക് സ്വാഗതം')}
             </p>
           </motion.div>
 
@@ -69,16 +80,10 @@ export default function Introduction() {
               <span style={{ fontWeight: 700, fontSize: '0.92rem', color: '#1a2744' }}>ആമുഖം</span>
             </div>
             <p style={{ fontFamily: 'sans-serif', fontSize: '0.92rem', color: '#333', lineHeight: 1.9, margin: '0 0 10px 0' }}>
-              നെയ്യാറ്റിൻകര രൂപതയ്ക്ക് കീഴിലുള്ള പുത്തൻകാട് ശിശുയേശു ദൈവാലയം,
-              വിശ്വാസം, ഐക്യം, ദൈവത്തിലുള്ള ആശ്രയം എന്നിവയുടെ ജീവന്റെ
-              സാക്ഷ്യമാണ്. തലമുറകളായി ഭക്തജനങ്ങൾ ഈ ദൈവാലയത്തിൽ
-              ആരാധനയ്ക്കും പ്രാർഥനയ്ക്കും ഒത്തുചേർന്ന് ദൈവകൃപ അനുഭവിക്കുന്നു.
+              {m('introPara1', 'നെയ്യാറ്റിൻകര രൂപതയ്ക്ക് കീഴിലുള്ള പുത്തൻകാട് ശിശുയേശു ദൈവാലയം, വിശ്വാസം, ഐക്യം, ദൈവത്തിലുള്ള ആശ്രയം എന്നിവയുടെ ജീവന്റെ സാക്ഷ്യമാണ്. തലമുറകളായി ഭക്തജനങ്ങൾ ഈ ദൈവാലയത്തിൽ ആരാധനയ്ക്കും പ്രാർഥനയ്ക്കും ഒത്തുചേർന്ന് ദൈവകൃപ അനുഭവിക്കുന്നു.')}
             </p>
             <p style={{ fontFamily: 'sans-serif', fontSize: '0.92rem', color: '#555', lineHeight: 1.9, margin: 0 }}>
-              ഈ ദൈവാലയം ഒരു സാധാരണ കെട്ടിടം മാത്രമല്ല — ഇത് ആത്മീയ
-              ജീവിതത്തിന്റെ കേന്ദ്രമാണ്. കൂദാശകൾ, ഭക്തി കൂട്ടായ്മകൾ,
-              സേവന പ്രവർത്തനങ്ങൾ എന്നിവ വഴി ഓരോ വിശ്വാസിയുടെ ജീവിതത്തെയും
-              ഈ ദൈവാലയം സമ്പന്നമാക്കുന്നു.
+              {m('introPara2', 'ഈ ദൈവാലയം ഒരു സാധാരണ കെട്ടിടം മാത്രമല്ല — ഇത് ആത്മീയ ജീവിതത്തിന്റെ കേന്ദ്രമാണ്. കൂദാശകൾ, ഭക്തി കൂട്ടായ്മകൾ, സേവന പ്രവർത്തനങ്ങൾ എന്നിവ വഴി ഓരോ വിശ്വാസിയുടെ ജീവിതത്തെയും ഈ ദൈവാലയം സമ്പന്നമാക്കുന്നു.')}
             </p>
           </motion.div>
 
@@ -182,7 +187,7 @@ export default function Introduction() {
           {/* Church image card */}
           <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.14)', border: '1px solid rgba(201,168,76,0.2)', background: '#1a2744', position: 'relative' }}>
             <div className="intro-image-wrap">
-              <img src="/image.jpg" alt="Infant Jesus Church" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              <img src={churchImage} alt="Infant Jesus Church" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,15,30,0.92) 0%, rgba(10,15,30,0.35) 45%, transparent 70%)' }} />
 
               {/* Top badge */}
@@ -195,22 +200,26 @@ export default function Introduction() {
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '22px 22px 26px' }}>
                 <div style={{ width: 40, height: 2.5, background: 'linear-gradient(90deg, #c9a84c, #e8d08a)', borderRadius: 2, marginBottom: 12 }} />
                 <h2 style={{ fontFamily: 'sans-serif', fontSize: 'clamp(1.1rem, 3vw, 1.6rem)', fontWeight: 700, color: '#fff', margin: '0 0 8px 0', lineHeight: 1.3 }}>
-                  ദൈവാലയ ആശീർവാദം
+                  {m('blessingTitle', 'ദൈവാലയ ആശീർവാദം')}
                 </h2>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 16 }}>
                   <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#c9a84c', flexShrink: 0 }} />
                   <p style={{ fontFamily: 'sans-serif', fontSize: '0.78rem', color: 'rgba(220,210,190,0.9)', margin: 0 }}>
-                    2026 മെയ് 24 ഞായറാഴ്ച വൈകുന്നേരം 4:00 ന്
+                    {m('blessingDate', '2026 മെയ് 24 ഞായറാഴ്ച വൈകുന്നേരം 4:00 ന്')}
                   </p>
                 </div>
                 <div style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(16px)', border: '1px solid rgba(201,168,76,0.25)', borderRadius: 14, padding: '12px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div>
                     <div style={{ fontSize: '0.62rem', color: '#c9a84c', letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: 'Inter, sans-serif', marginBottom: 3 }}>സ്ഥലം</div>
-                    <div style={{ fontSize: '0.82rem', color: '#fff', fontFamily: 'sans-serif', fontWeight: 600 }}>പുത്തൻകാട്, കേരളം</div>
+                    <div style={{ fontSize: '0.82rem', color: '#fff', fontFamily: 'sans-serif', fontWeight: 600 }}>
+                      {m('location', 'പുത്തൻകാട്, കേരളം')}
+                    </div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div style={{ fontSize: '0.62rem', color: '#c9a84c', letterSpacing: '0.1em', textTransform: 'uppercase', fontFamily: 'Inter, sans-serif', marginBottom: 3 }}>രൂപത</div>
-                    <div style={{ fontSize: '0.82rem', color: '#fff', fontFamily: 'sans-serif', fontWeight: 600 }}>നെയ്യാറ്റിൻകര</div>
+                    <div style={{ fontSize: '0.82rem', color: '#fff', fontFamily: 'sans-serif', fontWeight: 600 }}>
+                      {m('diocese', 'നെയ്യാറ്റിൻകര')}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -220,8 +229,8 @@ export default function Introduction() {
           {/* Quick info cards */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginTop: 14 }}>
             {[
-              { icon: '🙏', label: 'ദിവ്യബലി സമയം', value: 'രാവിലെ 6:30' },
-              { icon: '📍', label: 'വിലാസം', value: 'പുത്തൻകാട്' },
+              { icon: '🙏', label: 'ദിവ്യബലി സമയം', value: m('massTimeValue', 'രാവിലെ 6:30') },
+              { icon: '📍', label: 'വിലാസം', value: m('addressValue', 'പുത്തൻകാട്') },
             ].map((item, i) => (
               <div key={i} style={{ background: '#fff', borderRadius: 14, padding: '14px', boxShadow: '0 4px 16px rgba(0,0,0,0.07)', border: '1px solid rgba(201,168,76,0.12)' }}>
                 <div style={{ fontSize: '1.3rem', marginBottom: 5 }}>{item.icon}</div>

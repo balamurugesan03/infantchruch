@@ -105,12 +105,19 @@ export default function Footer() {
           <Text size="xs" style={{ color: '#667' }}>
             © {new Date().getFullYear()} Infant Jesus Church, Puthenkad. All rights reserved.
           </Text>
-          <Link
-            to="/admin/login"
-            style={{ color: '#667', fontSize: '0.75rem', textDecoration: 'none' }}
-          >
-            Admin Panel
-          </Link>
+          <Group gap="xs" align="center">
+            <Text size="xs" style={{ color: '#556' }}>
+              Designed & Developed by{' '}
+              <span style={{ color: '#c9a84c', fontWeight: 600 }}>Balamurugesan</span>
+            </Text>
+            <Text size="xs" style={{ color: '#445' }}>·</Text>
+            <Link
+              to="/admin/login"
+              style={{ color: '#667', fontSize: '0.75rem', textDecoration: 'none' }}
+            >
+              Admin Panel
+            </Link>
+          </Group>
         </Group>
       </Container>
     </Box>
