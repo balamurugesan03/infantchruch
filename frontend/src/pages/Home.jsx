@@ -140,7 +140,7 @@ export default function Home() {
                 letterSpacing: '0.28em',
                 fontWeight: 600,
                 textTransform: 'uppercase',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: "'Meera Inimai', Inter, sans-serif",
               }}>
                 Welcome To
               </span>
@@ -204,7 +204,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.65, duration: 0.7 }}
               style={{
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: "'Meera Inimai', Inter, sans-serif",
                 fontSize: 'clamp(0.92rem, 1.3vw, 1.08rem)',
                 color: 'rgba(210,225,245,0.88)',
                 lineHeight: 1.9,
@@ -235,7 +235,7 @@ export default function Home() {
                     background: 'linear-gradient(135deg, #c9a84c, #e8d08a)',
                     color: '#1a1200',
                     fontSize: '0.92rem', fontWeight: 700,
-                    fontFamily: 'Inter, sans-serif',
+                    fontFamily: "'Meera Inimai', Inter, sans-serif",
                     letterSpacing: '0.04em',
                     border: 'none', borderRadius: 50,
                     cursor: 'pointer',
@@ -256,7 +256,7 @@ export default function Home() {
                   background: 'rgba(255,255,255,0.06)',
                   color: '#fff',
                   fontSize: '0.92rem', fontWeight: 500,
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: "'Meera Inimai', Inter, sans-serif",
                   letterSpacing: '0.04em',
                   border: '1px solid rgba(255,255,255,0.2)',
                   borderRadius: 50, cursor: 'pointer',
@@ -296,7 +296,7 @@ export default function Home() {
                   <div style={{ fontFamily: 'Crimson Pro, serif', fontSize: '2.2rem', fontWeight: 700, color: '#c9a84c', lineHeight: 1 }}>
                     {stat.value}
                   </div>
-                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', color: 'rgba(180,200,230,0.6)', marginTop: 5, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  <div style={{ fontFamily: "'Meera Inimai', Inter, sans-serif", fontSize: '0.72rem', color: 'rgba(180,200,230,0.6)', marginTop: 5, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                     {stat.label}
                   </div>
                 </div>
@@ -317,7 +317,7 @@ export default function Home() {
             zIndex: 4,
           }}
         >
-          <span style={{ color: 'rgba(201,168,76,0.6)', fontSize: '0.62rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: 'Inter, sans-serif' }}>
+          <span style={{ color: 'rgba(201,168,76,0.6)', fontSize: '0.62rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontFamily: "'Meera Inimai', Inter, sans-serif" }}>
             Scroll
           </span>
           <motion.div
@@ -366,16 +366,16 @@ export default function Home() {
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
               <Clock size={16} color="#c9a84c" />
-              <span style={{ color: '#c9a84c', fontSize: '0.72rem', letterSpacing: '0.15em', fontWeight: 700, textTransform: 'uppercase', fontFamily: 'Inter, sans-serif' }}>
+              <span style={{ color: '#c9a84c', fontSize: '0.72rem', letterSpacing: '0.15em', fontWeight: 700, textTransform: 'uppercase', fontFamily: "'Meera Inimai', Inter, sans-serif" }}>
                 Mass Timings
               </span>
             </div>
             <div style={{ width: 1, height: 28, background: 'rgba(201,168,76,0.2)' }} />
             {page.massTimes.map((mt, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, flexShrink: 0 }}>
-                <span style={{ color: 'rgba(180,200,230,0.7)', fontSize: '0.82rem', fontFamily: 'Inter, sans-serif' }}>{mt.day}</span>
-                <span style={{ color: '#c9a84c', fontWeight: 700, fontSize: '0.9rem', fontFamily: 'Inter, sans-serif' }}>{mt.time}</span>
-                <span style={{ color: 'rgba(180,200,230,0.45)', fontSize: '0.72rem', fontFamily: 'Inter, sans-serif' }}>{mt.language}</span>
+                <span style={{ color: 'rgba(180,200,230,0.7)', fontSize: '0.82rem', fontFamily: "'Meera Inimai', Inter, sans-serif" }}>{mt.day}</span>
+                <span style={{ color: '#c9a84c', fontWeight: 700, fontSize: '0.9rem', fontFamily: "'Meera Inimai', Inter, sans-serif" }}>{mt.time}</span>
+                <span style={{ color: 'rgba(180,200,230,0.45)', fontSize: '0.72rem', fontFamily: "'Meera Inimai', Inter, sans-serif" }}>{mt.language}</span>
                 {i < page.massTimes.length - 1 && (
                   <div style={{ width: 1, height: 20, background: 'rgba(201,168,76,0.15)', marginLeft: 10 }} />
                 )}
@@ -398,7 +398,7 @@ export default function Home() {
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, marginBottom: 20 }}>
             <div style={{ width: 50, height: 1, background: 'linear-gradient(90deg, transparent, #c9a84c)' }} />
-            <span style={{ color: '#c9a84c', fontSize: '0.72rem', letterSpacing: '0.2em', fontWeight: 600, textTransform: 'uppercase', fontFamily: 'Inter, sans-serif' }}>
+            <span style={{ color: '#c9a84c', fontSize: '0.72rem', letterSpacing: '0.2em', fontWeight: 600, textTransform: 'uppercase', fontFamily: "'Meera Inimai', Inter, sans-serif" }}>
               Our Parish
             </span>
             <div style={{ width: 50, height: 1, background: 'linear-gradient(90deg, #c9a84c, transparent)' }} />
@@ -477,7 +477,7 @@ export default function Home() {
                 {section.title}
               </h3>
               <p style={{
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: "'Meera Inimai', Inter, sans-serif",
                 fontSize: '0.88rem',
                 color: 'rgba(180,200,230,0.7)',
                 lineHeight: 1.85,
@@ -508,7 +508,7 @@ export default function Home() {
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
                   <div style={{ width: 36, height: 1, background: '#c9a84c' }} />
-                  <span style={{ color: '#c9a84c', fontSize: '0.72rem', letterSpacing: '0.2em', fontWeight: 600, textTransform: 'uppercase', fontFamily: 'Inter, sans-serif' }}>
+                  <span style={{ color: '#c9a84c', fontSize: '0.72rem', letterSpacing: '0.2em', fontWeight: 600, textTransform: 'uppercase', fontFamily: "'Meera Inimai', Inter, sans-serif" }}>
                     Calendar
                   </span>
                 </div>
@@ -519,7 +519,7 @@ export default function Home() {
               <Link to="/contact" style={{ textDecoration: 'none' }}>
                 <motion.div
                   whileHover={{ gap: 12 }}
-                  style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#c9a84c', fontSize: '0.85rem', fontFamily: 'Inter, sans-serif', fontWeight: 500 }}
+                  style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#c9a84c', fontSize: '0.85rem', fontFamily: "'Meera Inimai', Inter, sans-serif", fontWeight: 500 }}
                 >
                   View All <ArrowRight size={16} />
                 </motion.div>
@@ -562,7 +562,7 @@ export default function Home() {
                     <span style={{ color: '#c9a84c', fontSize: '1.4rem', fontFamily: 'Crimson Pro, serif', fontWeight: 700, lineHeight: 1 }}>
                       {new Date(event.date).getDate()}
                     </span>
-                    <span style={{ color: 'rgba(201,168,76,0.7)', fontSize: '0.65rem', fontFamily: 'Inter, sans-serif', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                    <span style={{ color: 'rgba(201,168,76,0.7)', fontSize: '0.65rem', fontFamily: "'Meera Inimai', Inter, sans-serif", textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       {new Date(event.date).toLocaleString('en', { month: 'short' })}
                     </span>
                   </div>
@@ -573,7 +573,7 @@ export default function Home() {
                       border: '1px solid rgba(201,168,76,0.2)',
                       color: '#c9a84c',
                       fontSize: '0.65rem',
-                      fontFamily: 'Inter, sans-serif',
+                      fontFamily: "'Meera Inimai', Inter, sans-serif",
                       letterSpacing: '0.1em',
                       textTransform: 'uppercase',
                       padding: '3px 10px',
@@ -585,13 +585,13 @@ export default function Home() {
                     <h4 style={{ fontFamily: 'Crimson Pro, serif', fontSize: '1.1rem', color: '#fff', fontWeight: 600, margin: '0 0 6px 0', lineHeight: 1.3 }}>
                       {event.title}
                     </h4>
-                    <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(180,200,230,0.6)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
+                    <p style={{ fontFamily: "'Meera Inimai', Inter, sans-serif", fontSize: '0.8rem', color: 'rgba(180,200,230,0.6)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
                       {event.description}
                     </p>
                     {event.time && (
                       <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                         <Clock size={12} color="#c9a84c" />
-                        <span style={{ color: '#c9a84c', fontSize: '0.78rem', fontFamily: 'Inter, sans-serif' }}>{event.time}</span>
+                        <span style={{ color: '#c9a84c', fontSize: '0.78rem', fontFamily: "'Meera Inimai', Inter, sans-serif" }}>{event.time}</span>
                       </div>
                     )}
                   </div>
@@ -643,7 +643,7 @@ export default function Home() {
             Join Our Faith Community
           </h2>
           <p style={{
-            fontFamily: 'Inter, sans-serif',
+            fontFamily: "'Meera Inimai', Inter, sans-serif",
             fontSize: 'clamp(0.88rem, 1.2vw, 1rem)',
             color: 'rgba(180,200,230,0.75)',
             maxWidth: 500,
@@ -662,7 +662,7 @@ export default function Home() {
                   padding: '14px 32px',
                   background: 'linear-gradient(135deg, #c9a84c, #e8d08a)',
                   color: '#1a1200', fontWeight: 700, fontSize: '0.9rem',
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: "'Meera Inimai', Inter, sans-serif",
                   border: 'none', borderRadius: 50, cursor: 'pointer',
                   boxShadow: '0 4px 24px rgba(201,168,76,0.25)',
                 }}
@@ -679,7 +679,7 @@ export default function Home() {
                   padding: '14px 28px',
                   background: 'rgba(255,255,255,0.04)',
                   color: '#fff', fontWeight: 500, fontSize: '0.9rem',
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: "'Meera Inimai', Inter, sans-serif",
                   border: '1px solid rgba(255,255,255,0.15)', borderRadius: 50, cursor: 'pointer',
                   backdropFilter: 'blur(12px)',
                 }}
@@ -731,7 +731,7 @@ export default function Home() {
               <h3 style={{ fontFamily: 'Crimson Pro, serif', color: '#fff', fontSize: '1.5rem', margin: '0 0 12px' }}>
                 Parish Video
               </h3>
-              <p style={{ color: 'rgba(180,200,230,0.7)', fontFamily: 'Inter, sans-serif', fontSize: '0.88rem', marginBottom: 24 }}>
+              <p style={{ color: 'rgba(180,200,230,0.7)', fontFamily: "'Meera Inimai', Inter, sans-serif", fontSize: '0.88rem', marginBottom: 24 }}>
                 Add your parish video URL in the Admin Panel to display it here.
               </p>
               <button
@@ -743,7 +743,7 @@ export default function Home() {
                   color: '#c9a84c',
                   borderRadius: 50,
                   cursor: 'pointer',
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: "'Meera Inimai', Inter, sans-serif",
                   fontSize: '0.85rem',
                 }}
               >

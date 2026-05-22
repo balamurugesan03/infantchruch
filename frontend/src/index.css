@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+/* Meera Inimai — auto-applied for Malayalam chars (U+0D00–U+0D7F).
+   When font-family is 'Inter' or 'Meera Inimai, sans-serif', the browser
+   uses Meera for Malayalam glyphs and Inter/system-font for Latin. */
+@font-face {
+  font-family: 'Inter';
+  src: local('Meera Inimai');
+  unicode-range: U+0D00-U+0D7F;
+}
+
 :root {
   --color-gold: #c9a84c;
   --color-gold-light: #e8d08a;

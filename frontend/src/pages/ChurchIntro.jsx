@@ -33,7 +33,7 @@ export default function ChurchIntro() {
     <div style={{
       minHeight: '100vh',
       position: 'relative',
-      fontFamily: 'sans-serif',
+      fontFamily: "'Meera Inimai', sans-serif",
       overflow: 'hidden',
     }}>
 
@@ -110,7 +110,7 @@ export default function ChurchIntro() {
               </div>
               <div>
                 <h1 style={{
-                  fontFamily: 'sans-serif',
+                  fontFamily: "'Meera Inimai', sans-serif",
                   fontSize: 'clamp(1.1rem, 2.5vw, 1.55rem)',
                   fontWeight: 800,
                   color: '#1a2744',
@@ -167,7 +167,7 @@ export default function ChurchIntro() {
                     fontSize: '1rem',
                     color: '#333',
                     outline: 'none',
-                    fontFamily: 'sans-serif',
+                    fontFamily: "'Meera Inimai', sans-serif",
                   }}
                 />
               </div>
@@ -190,7 +190,7 @@ export default function ChurchIntro() {
                   fontSize: '0.92rem',
                   fontWeight: 700,
                   color: '#1a1200',
-                  fontFamily: 'sans-serif',
+                  fontFamily: "'Meera Inimai', sans-serif",
                 }}>
                   തിരയുക
                 </span>
@@ -241,7 +241,7 @@ export default function ChurchIntro() {
                 lineHeight: 2.1,
                 textAlign: 'justify',
                 whiteSpace: 'pre-line',
-                fontFamily: 'sans-serif',
+                fontFamily: "'Meera Inimai', sans-serif",
               }}>
                 {m('mainContent', `ആഗോള കത്തോലിക്കാ സഭയിൽ നെയ്യാറ്റിൻകര രൂപത
 പുത്തൻകട പ്രദേശത്തിൽ ഉണ്ണിമിശിഹായുടെ നാമധേയത്തിൽ
@@ -352,7 +352,7 @@ export default function ChurchIntro() {
                   fontSize: '0.88rem',
                   fontWeight: 600,
                   color: '#fff',
-                  fontFamily: 'sans-serif',
+                  fontFamily: "'Meera Inimai', sans-serif",
                   textAlign: 'left',
                   lineHeight: 1.3,
                 }}>
@@ -388,7 +388,7 @@ export default function ChurchIntro() {
                 fontSize: '0.82rem',
                 fontWeight: 700,
                 color: '#1a2744',
-                fontFamily: 'sans-serif',
+                fontFamily: "'Meera Inimai', sans-serif",
                 marginBottom: 4,
               }}>
                 {m('decorativeCardTitle', 'ദൈവ സന്നിധിയിൽ')}
@@ -396,7 +396,7 @@ export default function ChurchIntro() {
               <div style={{
                 fontSize: '0.72rem',
                 color: '#888',
-                fontFamily: 'sans-serif',
+                fontFamily: "'Meera Inimai', sans-serif",
                 lineHeight: 1.6,
                 whiteSpace: 'pre-line',
               }}>
@@ -437,7 +437,7 @@ export default function ChurchIntro() {
               background: 'linear-gradient(135deg, #0f1c38, #1a2744)',
               borderBottom: '1px solid rgba(201,168,76,0.2)',
             }}>
-              <span style={{ color: '#c9a84c', fontWeight: 700, fontSize: '0.95rem', fontFamily: 'sans-serif' }}>
+              <span style={{ color: '#c9a84c', fontWeight: 700, fontSize: '0.95rem', fontFamily: "'Meera Inimai', sans-serif" }}>
                 ദൈവാലയ പ്രഖ്യാപനങ്ങൾ
               </span>
               <button

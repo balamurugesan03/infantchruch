@@ -105,7 +105,7 @@ export default function Navbar() {
                 </div>
                 <div style={{
                   fontSize: '0.65rem', color: '#c9a84c',
-                  letterSpacing: '0.1em', fontFamily: 'Inter, sans-serif', opacity: 0.85,
+                  letterSpacing: '0.1em', fontFamily: "'Meera Inimai', Inter, sans-serif", opacity: 0.85,
                 }}>
                   PUTHENKAD · NEYYATTINKARA
                 </div>
@@ -127,7 +127,7 @@ export default function Navbar() {
                       color: active ? '#c9a84c' : 'rgba(210,225,245,0.82)',
                       fontSize: '0.88rem',
                       fontWeight: active ? 600 : 400,
-                      fontFamily: 'Inter, sans-serif',
+                      fontFamily: "'Meera Inimai', Inter, sans-serif",
                       letterSpacing: '0.03em',
                       cursor: 'pointer',
                       transition: 'color 0.2s',
@@ -161,7 +161,7 @@ export default function Navbar() {
                   padding: '9px 22px',
                   background: 'linear-gradient(135deg, #c9a84c, #e8d08a)',
                   color: '#1a1200', fontSize: '0.82rem', fontWeight: 700,
-                  fontFamily: 'Inter, sans-serif', letterSpacing: '0.04em',
+                  fontFamily: "'Meera Inimai', Inter, sans-serif", letterSpacing: '0.04em',
                   border: 'none', borderRadius: 50, cursor: 'pointer',
                   boxShadow: '0 2px 16px rgba(201,168,76,0.2)',
                   transition: 'all 0.3s',
@@ -251,7 +251,7 @@ export default function Navbar() {
                     </div>
                     <div style={{
                       fontSize: '0.58rem', color: '#c9a84c',
-                      letterSpacing: '0.1em', fontFamily: 'Inter, sans-serif',
+                      letterSpacing: '0.1em', fontFamily: "'Meera Inimai', Inter, sans-serif",
                     }}>
                       PUTHENKAD · NEYYATTINKARA
                     </div>
@@ -276,7 +276,7 @@ export default function Navbar() {
                 <div style={{
                   fontSize: '0.6rem', color: 'rgba(180,200,230,0.4)',
                   letterSpacing: '0.2em', textTransform: 'uppercase',
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: "'Meera Inimai', Inter, sans-serif",
                 }}>
                   Navigation
                 </div>
@@ -339,7 +339,7 @@ export default function Navbar() {
                     width: '100%', padding: '14px',
                     background: 'linear-gradient(135deg, #c9a84c, #e8d08a)',
                     color: '#1a1200', fontSize: '0.9rem', fontWeight: 700,
-                    fontFamily: 'Inter, sans-serif',
+                    fontFamily: "'Meera Inimai', Inter, sans-serif",
                     border: 'none', borderRadius: 50, cursor: 'pointer',
                     display: 'flex', alignItems: 'center',
                     justifyContent: 'center', gap: 8,
