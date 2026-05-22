@@ -181,7 +181,7 @@ export default function Home() {
                 textShadow: '0 2px 12px rgba(0,0,0,0.4)',
               }}
             >
-              Puthenkad · Neyyattinkara Diocese
+              Puthenkada · Neyyattinkara Diocese
             </motion.p>
 
             {/* Gold divider */}

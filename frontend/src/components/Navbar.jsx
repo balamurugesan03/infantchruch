@@ -107,7 +107,7 @@ export default function Navbar() {
                   fontSize: '0.65rem', color: '#c9a84c',
                   letterSpacing: '0.1em', fontFamily: "'Meera Inimai', Inter, sans-serif", opacity: 0.85,
                 }}>
-                  PUTHENKAD · NEYYATTINKARA
+                  PUTHENKADA · NEYYATTINKARA
                 </div>
               </div>
             </motion.div>

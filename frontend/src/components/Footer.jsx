@@ -29,7 +29,7 @@ export default function Footer() {
                 </Text>
               </Group>
               <Text size="sm" c="dimmed" style={{ color: '#9ab', lineHeight: 1.7 }}>
-                Puthenkad, Neyyattinkara Diocese. A living witness to faith, unity, and
+                Puthenkada, Neyyattinkara Diocese. A living witness to faith, unity, and
                 reliance on God for generations.
               </Text>
               <Box
@@ -108,7 +108,7 @@ export default function Footer() {
           <Group gap="xs" align="center">
             <Text size="xs" style={{ color: '#556' }}>
               Designed & Developed by{' '}
-              <span style={{ color: '#c9a84c', fontWeight: 600 }}>Balamurugesan</span>
+              <span style={{ color: '#c9a84c', fontWeight: 600 }}>Gireesh</span>
             </Text>
             <Text size="xs" style={{ color: '#445' }}>·</Text>
             <Link
