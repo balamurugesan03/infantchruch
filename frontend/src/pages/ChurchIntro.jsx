@@ -5,7 +5,7 @@ import { IconSearch, IconChevronRight } from '@tabler/icons-react';
 import { pageService } from '../services/api';
 
 const MENU_ITEMS = [
-  { label: 'ദൈവാലയ ഗോപുരങ്ങൾ',                        download: '/pdfs/Button 1 daivalaya gopurangal 3 pages (1).pdf' },
+  { label: 'ദൈവാലയ ഗോപുരങ്ങൾ',                        path: '/gopurangal-images' },
   { label: 'രക്ഷാകര ചരിത്രം',                          path: '/about' },
   { label: 'അങ്കണത്തിൽ നിന്ന് ആനവാതിലിലേക്ക്',       path: '/contact' },
   { label: 'ദൈവാലയത്തിന്റെ ഉൽത്തളങ്ങളിൽ',            path: '/about' },

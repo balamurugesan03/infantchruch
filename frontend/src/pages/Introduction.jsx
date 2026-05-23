@@ -140,7 +140,7 @@ export default function Introduction() {
             style={{ background: '#fff', borderRadius: 18, padding: '20px 16px', boxShadow: '0 4px 20px rgba(0,0,0,0.06)', border: '1px solid rgba(201,168,76,0.12)' }}
           >
             <p style={{ fontSize: '0.72rem', fontWeight: 600, color: '#888', letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px 0', textAlign: 'center' }}>
-              കത്തോലിക്ക സഭയുടെ ഘടന
+               ഉണ്ണിമിശിഹാ ദൈവാലയം പുത്തൻകട
             </p>
 
             {/* Desktop: horizontal row */}
