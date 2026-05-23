@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cross, Menu, X, HandHeart, ChevronRight } from 'lucide-react';
+import { Menu, X, HandHeart, ChevronRight } from 'lucide-react';
 
 const navLinks = [
   { label: 'Introduction', path: '/introduction' },
@@ -93,7 +93,14 @@ export default function Navbar() {
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 flexShrink: 0,
               }}>
-                <Cross size={18} color="#c9a84c" />
+                <span style={{
+                  fontSize: '1.3rem', lineHeight: 1,
+                  color: '#f0d060',
+                  textShadow: '1px 1px 0 #7a5a10, 2px 2px 0 #5a3e08, 3px 3px 4px rgba(0,0,0,0.6)',
+                  display: 'inline-block',
+                  transform: 'perspective(80px) rotateX(10deg)',
+                  filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))',
+                }}>✝</span>
               </div>
               <div>
                 <div style={{
@@ -240,7 +247,14 @@ export default function Navbar() {
                     border: '1.5px solid rgba(201,168,76,0.4)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                   }}>
-                    <Cross size={16} color="#c9a84c" />
+                    <span style={{
+                      fontSize: '1.2rem', lineHeight: 1,
+                      color: '#f0d060',
+                      textShadow: '1px 1px 0 #7a5a10, 2px 2px 0 #5a3e08, 3px 3px 4px rgba(0,0,0,0.6)',
+                      display: 'inline-block',
+                      transform: 'perspective(80px) rotateX(10deg)',
+                      filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))',
+                    }}>✝</span>
                   </div>
                   <div>
                     <div style={{

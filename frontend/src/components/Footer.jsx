@@ -108,7 +108,7 @@ export default function Footer() {
           <Group gap="xs" align="center">
             <Text size="xs" style={{ color: '#556' }}>
               Designed & Developed by{' '}
-              <span style={{ color: '#c9a84c', fontWeight: 600 }}>Gireesh</span>
+              <span style={{ color: '#c9a84c', fontWeight: 600 }}>Gireesh Kumar</span>
             </Text>
             <Text size="xs" style={{ color: '#445' }}>·</Text>
             <Link

@@ -139,12 +139,12 @@ export default function Introduction() {
             transition={{ delay: 0.4, duration: 0.5 }}
             style={{ background: '#fff', borderRadius: 18, padding: '20px 16px', boxShadow: '0 4px 20px rgba(0,0,0,0.06)', border: '1px solid rgba(201,168,76,0.12)' }}
           >
-            <p style={{ fontSize: '0.72rem', fontWeight: 600, color: '#888', letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px 0', textAlign: 'center' }}>
+            {/* <p style={{ fontSize: '0.72rem', fontWeight: 600, color: '#888', letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 16px 0', textAlign: 'center' }}>
                ഉണ്ണിമിശിഹാ ദൈവാലയം പുത്തൻകട
-            </p>
+            </p> */}
 
             {/* Desktop: horizontal row */}
-            <div className="intro-steps-desktop">
+            {/* <div className="intro-steps-desktop">
               {STEPS.map((step, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 6, flex: 1, justifyContent: i === STEPS.length - 1 ? 'flex-end' : 'flex-start' }}>
                   <StepCircle step={step} last={i === STEPS.length - 1} />
@@ -156,7 +156,7 @@ export default function Introduction() {
                   )}
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* Mobile: 3+2 grid */}
             <div className="intro-steps-mobile">

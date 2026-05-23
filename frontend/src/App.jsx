@@ -12,6 +12,8 @@ import GopurangalImages from './pages/GopurangalImages';
 import Button2Images from './pages/Button2Images';
 import Button3Images from './pages/Button3Images';
 import Button4Images from './pages/Button4Images';
+import Button5Images from './pages/Button5Images';
+import Button6Images from './pages/Button6Images';
 import Button7Images from './pages/Button7Images';
 import AdminLogin from './admin/AdminLogin';
 import AdminLayout from './admin/AdminLayout';
@@ -41,6 +43,8 @@ export default function App() {
             <Route path="button2-images" element={<Button2Images />} />
             <Route path="button3-images" element={<Button3Images />} />
             <Route path="button4-images" element={<Button4Images />} />
+            <Route path="button5-images" element={<Button5Images />} />
+            <Route path="button6-images" element={<Button6Images />} />
             <Route path="button7-images" element={<Button7Images />} />
             <Route path="about" element={<About />} />
             <Route path="gallery" element={<Gallery />} />

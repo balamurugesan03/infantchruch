@@ -9,8 +9,8 @@ const MENU_ITEMS = [
   { label: 'രക്ഷാകര ചരിത്രം',                          path: '/button2-images' },
   { label: 'അങ്കണത്തിൽ നിന്ന് ആനവാതിലിലേക്ക്',       path: '/button3-images' },
   { label: 'ദൈവാലയത്തിന്റെ ഉൽത്തളങ്ങളിൽ',            path: '/button4-images' },
-  { label: 'ആൾത്താരയിലേക്ക്',                         path: '/contact' },
-  { label: 'വിശുദ്ധർ',                                 path: '/gallery' },
+  { label: 'ആൾത്താരയിലേക്ക്',                         path: '/button5-images' },
+  { label: 'വിശുദ്ധർ',                                 path: '/button6-images' },
   { label: 'തിരികെ ഇറങ്ങുമ്പോൾ',                     path: '/button7-images' },
 ];
 
