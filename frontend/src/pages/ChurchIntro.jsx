@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { IconSearch, IconChevronRight, IconX } from '@tabler/icons-react';
+import { IconSearch, IconChevronRight } from '@tabler/icons-react';
 import { pageService } from '../services/api';
 
 const MENU_ITEMS = [
@@ -17,7 +17,6 @@ const MENU_ITEMS = [
 export default function ChurchIntro() {
   const [search, setSearch] = useState('');
   const [pageData, setPageData] = useState(null);
-  const [pdfUrl, setPdfUrl] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -328,7 +327,7 @@ export default function ChurchIntro() {
                 whileTap={{ scale: 0.97 }}
                 onClick={() => {
                   if (item.download) {
-                    setPdfUrl(item.download);
+                    window.open(item.download, '_blank');
                   } else {
                     navigate(item.path);
                   }
@@ -407,59 +406,6 @@ export default function ChurchIntro() {
         </div>
       </div>
 
-      {/* ── PDF Viewer Modal ── */}
-      {pdfUrl && (
-        <div style={{
-          position: 'fixed', inset: 0, zIndex: 999,
-          background: 'rgba(0,0,0,0.75)',
-          display: 'flex', flexDirection: 'column',
-          alignItems: 'center', justifyContent: 'center',
-          padding: '20px',
-        }}
-          onClick={() => setPdfUrl(null)}
-        >
-          <div
-            style={{
-              width: '100%', maxWidth: 860,
-              height: '90vh',
-              background: '#fff',
-              borderRadius: 16,
-              overflow: 'hidden',
-              display: 'flex', flexDirection: 'column',
-              boxShadow: '0 24px 80px rgba(0,0,0,0.5)',
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal header */}
-            <div style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              padding: '14px 20px',
-              background: 'linear-gradient(135deg, #0f1c38, #1a2744)',
-              borderBottom: '1px solid rgba(201,168,76,0.2)',
-            }}>
-              <span style={{ color: '#c9a84c', fontWeight: 700, fontSize: '0.95rem', fontFamily: "'Meera Inimai', sans-serif" }}>
-                ദൈവാലയ പ്രഖ്യാപനങ്ങൾ
-              </span>
-              <button
-                onClick={() => setPdfUrl(null)}
-                style={{
-                  background: 'rgba(255,255,255,0.1)', border: 'none',
-                  borderRadius: 8, padding: '6px 8px',
-                  cursor: 'pointer', display: 'flex', alignItems: 'center',
-                }}
-              >
-                <IconX size={18} color="#fff" />
-              </button>
-            </div>
-            {/* PDF iframe */}
-            <iframe
-              src={pdfUrl}
-              style={{ flex: 1, width: '100%', border: 'none' }}
-              title="PDF Viewer"
-            />
-          </div>
-        </div>
-      )}
 
       <style>{`
         @media (max-width: 860px) {
