@@ -143,9 +143,9 @@ export default function AdminLogin() {
             </Stack>
           </form>
 
-          <Text size="xs" ta="center" style={{ color: '#667788' }}>
+          {/* <Text size="xs" ta="center" style={{ color: '#667788' }}>
             Default: admin@infantjesuschurch.com / admin123
-          </Text>
+          </Text> */}
         </Stack>
       </Card>
     </Box>
