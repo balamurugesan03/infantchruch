@@ -9,6 +9,10 @@ import Introduction from './pages/Introduction';
 import ChurchIntro from './pages/ChurchIntro';
 import ChurchTheology from './pages/ChurchTheology';
 import GopurangalImages from './pages/GopurangalImages';
+import Button2Images from './pages/Button2Images';
+import Button3Images from './pages/Button3Images';
+import Button4Images from './pages/Button4Images';
+import Button7Images from './pages/Button7Images';
 import AdminLogin from './admin/AdminLogin';
 import AdminLayout from './admin/AdminLayout';
 import AdminDashboard from './admin/AdminDashboard';
@@ -34,6 +38,10 @@ export default function App() {
             <Route path="introduction" element={<Introduction />} />
             <Route path="church-intro" element={<ChurchIntro />} />
             <Route path="gopurangal-images" element={<GopurangalImages />} />
+            <Route path="button2-images" element={<Button2Images />} />
+            <Route path="button3-images" element={<Button3Images />} />
+            <Route path="button4-images" element={<Button4Images />} />
+            <Route path="button7-images" element={<Button7Images />} />
             <Route path="about" element={<About />} />
             <Route path="gallery" element={<Gallery />} />
             <Route path="contact" element={<Contact />} />

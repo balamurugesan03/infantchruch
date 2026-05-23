@@ -7,7 +7,7 @@ const gallerySchema = new mongoose.Schema(
     imageUrl: { type: String, required: true },
     category: {
       type: String,
-      enum: ['events', 'church', 'festivals', 'community', 'other'],
+      enum: ['inauguration', 'events', 'church', 'festivals', 'community', 'other'],
       default: 'other',
     },
     order: { type: Number, default: 0 },

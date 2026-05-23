@@ -8,7 +8,7 @@ import { notifications } from '@mantine/notifications';
 import { IconPlus, IconTrash, IconCheck, IconPhoto, IconAlertCircle } from '@tabler/icons-react';
 import { galleryService } from '../services/api';
 
-const CATEGORIES = ['events', 'church', 'festivals', 'community', 'other'];
+const CATEGORIES = ['inauguration', 'events', 'church', 'festivals', 'community', 'other'];
 
 const emptyForm = { title: '', description: '', category: 'other', image: null };
 

@@ -20,7 +20,7 @@ import { IconCross, IconPhoto } from '@tabler/icons-react';
 import { galleryService } from '../services/api';
 import PageLoader from '../components/PageLoader';
 
-const CATEGORIES = ['all', 'events', 'church', 'festivals', 'community', 'other'];
+const CATEGORIES = ['all', 'inauguration', 'events', 'church', 'festivals', 'community', 'other'];
 
 export default function Gallery() {
   const [images, setImages] = useState([]);

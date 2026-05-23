@@ -6,12 +6,12 @@ import { pageService } from '../services/api';
 
 const MENU_ITEMS = [
   { label: 'ദൈവാലയ ഗോപുരങ്ങൾ',                        path: '/gopurangal-images' },
-  { label: 'രക്ഷാകര ചരിത്രം',                          path: '/about' },
-  { label: 'അങ്കണത്തിൽ നിന്ന് ആനവാതിലിലേക്ക്',       path: '/contact' },
-  { label: 'ദൈവാലയത്തിന്റെ ഉൽത്തളങ്ങളിൽ',            path: '/about' },
+  { label: 'രക്ഷാകര ചരിത്രം',                          path: '/button2-images' },
+  { label: 'അങ്കണത്തിൽ നിന്ന് ആനവാതിലിലേക്ക്',       path: '/button3-images' },
+  { label: 'ദൈവാലയത്തിന്റെ ഉൽത്തളങ്ങളിൽ',            path: '/button4-images' },
   { label: 'ആൾത്താരയിലേക്ക്',                         path: '/contact' },
   { label: 'വിശുദ്ധർ',                                 path: '/gallery' },
-  { label: 'തിരികെ ഇറങ്ങുമ്പോൾ',                     path: '/gallery' },
+  { label: 'തിരികെ ഇറങ്ങുമ്പോൾ',                     path: '/button7-images' },
 ];
 
 export default function ChurchIntro() {
@@ -367,7 +367,7 @@ export default function ChurchIntro() {
             ))}
 
             {/* Decorative card below buttons */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9 }}
@@ -401,7 +401,7 @@ export default function ChurchIntro() {
               }}>
                 {m('decorativeCardText', 'ഓരോ ദിവസവും\nദൈവകൃപ അനുഭവിക്കുക')}
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>
