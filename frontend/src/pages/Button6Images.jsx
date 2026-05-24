@@ -3,7 +3,21 @@ import { useNavigate } from 'react-router-dom';
 import { IconArrowLeft } from '@tabler/icons-react';
 
 const IMAGES = [
-  '/button6.png',
+  '/Button_page-0001.jpg',
+  '/Button_page-0002.jpg',
+  '/Button_page-0003.jpg',
+  '/Button_page-0004.jpg',
+  '/Button_page-0005.jpg',
+  '/Button_page-0006.jpg',
+  '/Button_page-0007.jpg',
+  '/Button_page-0008.jpg',
+  '/Button_page-0009.jpg',
+  '/Button_page-0010.jpg',
+  '/Button_page-0011.jpg',
+  '/Button (1)_page-0012.jpg',
+  '/Button (1)_page-0013.jpg',
+  '/Button (1)_page-0014.jpg',
+  '/Button (1)_page-0015.jpg',
 ];
 
 export default function Button6Images() {

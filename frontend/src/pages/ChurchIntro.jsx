@@ -8,7 +8,7 @@ const MENU_ITEMS = [
   { label: 'ദൈവാലയ ഗോപുരങ്ങൾ',                        path: '/gopurangal-images' },
   { label: 'രക്ഷാകര ചരിത്രം',                          path: '/button2-images' },
   { label: 'അങ്കണത്തിൽ നിന്ന് ആനവാതിലിലേക്ക്',       path: '/button3-images' },
-  { label: 'ദൈവാലയത്തിന്റെ ഉൽത്തളങ്ങളിൽ',            path: '/button4-images' },
+  { label: 'ദൈവാലയത്തിന്റെ ഉൾത്തളങ്ങളിൽ',            path: '/button4-images' },
   { label: 'ആൾത്താരയിലേക്ക്',                         path: '/button5-images' },
   { label: 'വിശുദ്ധർ',                                 path: '/button6-images' },
   { label: 'തിരികെ ഇറങ്ങുമ്പോൾ',                     path: '/button7-images' },
