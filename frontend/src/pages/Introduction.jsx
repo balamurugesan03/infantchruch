@@ -127,7 +127,7 @@ export default function Introduction() {
                   gap: 8,
                 }}
               >
-                <img src="/palli kannadi.png" alt="പള്ളി കണ്ടി" style={{ height: 36, objectFit: 'contain' }} />
+                <img src="/palli kannadi-1.png" alt="പള്ളി കണ്ടി" style={{ height: 36, objectFit: 'contain' }} />
               </motion.button>
             </div>
           </motion.div>
