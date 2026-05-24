@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import {
   Container,
   Title,
@@ -23,9 +24,13 @@ import PageLoader from '../components/PageLoader';
 const CATEGORIES = ['all', 'inauguration', 'events', 'church', 'festivals', 'community', 'other'];
 
 export default function Gallery() {
+  const [searchParams] = useSearchParams();
   const [images, setImages] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const [category, setCategory] = useState('all');
+  const [category, setCategory] = useState(() => {
+    const param = searchParams.get('category');
+    return CATEGORIES.includes(param) ? param : 'all';
+  });
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(true);
   const [opened, { open, close }] = useDisclosure(false);

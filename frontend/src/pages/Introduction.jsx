@@ -132,6 +132,47 @@ export default function Introduction() {
             </div>
           </motion.div>
 
+          {/* Inauguration Gallery shortcut */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.5 }}
+            style={{ marginBottom: 16 }}
+          >
+            <motion.button
+              whileHover={{ scale: 1.02, boxShadow: '0 8px 32px rgba(201,168,76,0.45)' }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => navigate('/gallery?category=inauguration')}
+              style={{
+                width: '100%',
+                background: 'linear-gradient(135deg, #1a2744 0%, #243460 100%)',
+                border: '1.5px solid rgba(201,168,76,0.4)',
+                borderRadius: 18,
+                padding: '16px 22px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                boxShadow: '0 4px 20px rgba(26,39,68,0.2)',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <div style={{ width: 42, height: 42, borderRadius: 12, background: 'rgba(201,168,76,0.2)', border: '1px solid rgba(201,168,76,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <span style={{ fontSize: '1.3rem' }}>📸</span>
+                </div>
+                <div style={{ textAlign: 'left' }}>
+                  <div style={{ fontFamily: "'Meera Inimai', sans-serif", fontSize: '0.88rem', fontWeight: 700, color: '#fff', marginBottom: 2 }}>
+                    ഉദ്ഘാടന ഗാലറി
+                  </div>
+                  <div style={{ fontSize: '0.68rem', color: 'rgba(201,168,76,0.85)', fontFamily: 'Inter, sans-serif', letterSpacing: '0.04em' }}>
+                    Inauguration Gallery
+                  </div>
+                </div>
+              </div>
+              <IconChevronRight size={20} color="#c9a84c" strokeWidth={2.5} />
+            </motion.button>
+          </motion.div>
+
           {/* Journey steps */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
